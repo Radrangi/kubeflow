@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ARG base_image=ubuntu:16.04
+ARG base_image=ubuntu:xenial-20210114
 FROM $base_image
 
 ARG package=http://storage.googleapis.com/tensorflow-serving-apt/pool/tensorflow-model-server/t/tensorflow-model-server/tensorflow-model-server_1.6.0_all.deb
