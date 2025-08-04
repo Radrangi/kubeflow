@@ -13,7 +13,7 @@ ENV GO111MODULE=on
 RUN go build  -o webhook .
 
 # Copy the controller-manager into a thin image
-FROM ubuntu:latest
+FROM ubuntu:24.10
 WORKDIR /
 COPY --from=builder /go/src/github.com/kubeflow/kubeflow/components/admission-webhook/webhook .
 ENTRYPOINT ["/webhook"]
